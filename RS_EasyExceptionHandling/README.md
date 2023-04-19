@@ -5,6 +5,7 @@ The RS EasyExceptionHandling helper library developed by [Mr. Ravinder Singh (ри
 ## Features 
 - ASP.Net Core 6 error tracking in the SQLite database
 - Send an error notification to the team
+- Easy to access log data with help ErrorLogController  
 
 ## Getting started
 

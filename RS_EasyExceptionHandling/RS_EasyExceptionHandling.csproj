@@ -8,13 +8,22 @@
     <PackageId>RSEasyExceptionHandler</PackageId>
     <Title>RS Easy Exception Handler</Title>
     <Company>RS INNOVATORS</Company>
-    <Description>It helps you to manage error handling in your ASP.Net Core Web API or Web Site. So no need to write code for error loging for your project. The library supports ASP.NET core 6 for now.</Description>
+    <Description>The RS EasyExceptionHandling helper library developed by RS Team ](https://theravinder.com), it helps you to manage error handling in your ASP.Net Core Web API or Web Site. So no need to write code for error loging for your project. The library supports ASP.NET Core 6 for now.
+</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <FileVersion>1.0.0</FileVersion>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <Version>1.0.0</Version>
     <Product>RS Easy Exception Handler</Product>
     <Authors>Ravinder Singh</Authors>
+    <RepositoryUrl>https://github.com/ravinder25886/RSEasyExceptionHandler</RepositoryUrl>
+    <PackageReleaseNotes>It is beta version </PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/ravinder25886/RSEasyExceptionHandler</PackageProjectUrl>
+    <PackageIcon>RSEasyExceptionHandler.png</PackageIcon>
+    <RepositoryType>https://github.com/ravinder25886/RSEasyExceptionHandler</RepositoryType>
+    <PackageTags>Free Exception Handler, ASP.net Core 6</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +35,10 @@
 
   <ItemGroup>
     <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="RSEasyExceptionHandler.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

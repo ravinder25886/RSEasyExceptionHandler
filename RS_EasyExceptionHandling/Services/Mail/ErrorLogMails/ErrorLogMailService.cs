@@ -38,7 +38,7 @@ namespace RS_EasyExceptionHandling.Services.Mail.ErrorLogMails
                 {
                     if(entity.ErrorCount > 1)
                     {
-                        if (entity.ErrorDate.Date ==entity.MailSentDate.Date && entity.IsMailSent==true)
+                        if (entity.ErrorDate.Date ==entity.MailSentDate.Date)
                         {
                             return new Response<bool> { Succeeded = false, Message = "Mail already sent" };
                         }

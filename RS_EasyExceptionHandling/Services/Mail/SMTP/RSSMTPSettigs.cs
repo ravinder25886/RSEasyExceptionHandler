@@ -25,7 +25,7 @@ namespace RS_EasyExceptionHandling.Services.Mail.SMTP
 
                     TL_Emails = _config.GetSection("RSError_EmailSenderSMTP").GetSection("TL_Emails").Value,
                     Dev_Emails = _config.GetSection("RSError_EmailSenderSMTP").GetSection("Dev_Emails").Value,
-                    enable_error_notification =Convert.ToBoolean(_config.GetSection("RSError_EmailSenderSMTP").GetSection("enable_error_notifications").Value)
+                    enable_error_notification =Convert.ToBoolean(_config.GetSection("RSError_EmailSenderSMTP").GetSection("enable_error_notification").Value)
                 };
             }
             catch (Exception)

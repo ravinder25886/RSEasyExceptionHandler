@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddRS_ErrorHandlingMiddleware("Data Source=database\\MyAppErrorsLog.db");
+builder.Services.AddRS_ErrorHandlingMiddleware();
 
 var app = builder.Build();
 

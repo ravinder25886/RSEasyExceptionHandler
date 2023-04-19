@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RSEasyExceptionHandler" Version="1.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="database\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RS_EasyExceptionHandling\RS_EasyExceptionHandling.csproj" />
   </ItemGroup>
 
 </Project>

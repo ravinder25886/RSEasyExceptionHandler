@@ -24,31 +24,33 @@ Following Nuget packages
 Run the following command to install the package using the .NET CLI:
 
 ```C#
-dotnet add package RSEasyExceptionHandling
+dotnet add package RSEasyExceptionHandler 
 ```
 Alternatively, from the Package Manager Console or Developer PowerShell, run the following command to install the latest version:
 ```C#
-Install-Package RSEasyExceptionHandling
+Install-Package RSEasyExceptionHandler 
 ```
 
 Alternatively, use the NuGet Package Manager for Visual Studio or the NuGet window for JetBrains Rider, then search for Twilio.AspNet.Core and install the package.
 
-- Open Program.cs class and regester <i>AddRS_ErrorHandlingMiddleware</i> Dependency
+- Open Program.cs class and regester <i>AddRS_ErrorHandlingMiddleware</i> Dependency near builder.Services.AddSwaggerGen();
 
 	```C#
     builder.Services.AddRS_ErrorHandlingMiddleware();
     ```
-- Note: Devloper can set own database name and location in the project directory. 1dt create a folder like "Databaes" and then set "Data Source=database\\RSAppErrorsLog.db"
+- Note: Devloper can set own database name and location in the project. 1st create a folder like "Databaes" at root folder and then set "Data Source=database\\RSAppErrorsLog.db" like following
     ```C#
     builder.Services.AddRS_ErrorHandlingMiddleware("Data Source=database\\MyAppErrorsLog.db");
     ```
 
-- Next add following code lines in Program.cs
-
+- Next add following code lines in Program.cs near app.Run();
 	 ```C#
      RSDependencyInjection.SetupLogDataBase(app.Services.CreateScope());
      app.UseMiddleware<RS_ErrorHandlingMiddleware>();
+     
      ```
+     - Program.cs code file https://github.com/ravinder25886/RSEasyExceptionHandler/blob/main/TestWebApp/Program.cs
+
 - Add SMTP Settings in appsettings.json
     ```JSON
   "RSError_EmailSenderSMTP": {
@@ -64,10 +66,6 @@ Alternatively, use the NuGet Package Manager for Visual Studio or the NuGet wind
   }
     ```
 
-	 ```C#
-     RSDependencyInjection.SetupLogDataBase(app.Services.CreateScope());
-     app.UseMiddleware<RS_ErrorHandlingMiddleware>();
-     ```
 ## How to read error log
 We have developed very user friendly library so that developers can read error log without any hard work.
 
@@ -92,6 +90,22 @@ We have developed very user friendly library so that developers can read error l
             }
         }
    ```
+
+   Delete log functions
+   ```C#
+        [HttpPost]
+        [Route("DeleteAll")]
+        public async Task<IActionResult> DeleteAll(CancellationToken cancellationToken)
+        {
+            return Ok(await _errorLogCommandsService.DeleteAllAsync(cancellationToken));
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAll(Guid id, CancellationToken cancellationToken)
+        {
+            return Ok(await _errorLogCommandsService.DeleteByIdAsync(id, cancellationToken));
+        }
+   ```
+   - ErrorLogController code file https://github.com/ravinder25886/RSEasyExceptionHandler/blob/main/TestWebApp/Controllers/ErrorLogController.cs 
 ## Feedback
 
 If  this package is help full to you, then please share this package with your developer's friends. Moroeover, if you want to share your comment then please use following chanels:- 

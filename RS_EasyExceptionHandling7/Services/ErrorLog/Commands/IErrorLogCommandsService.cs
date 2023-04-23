@@ -1,7 +1,7 @@
-﻿using RS_EasyExceptionHandling.Contracts;
-using RS_EasyExceptionHandling.Services.Comman;
+﻿using RS_EasyExceptionHandling7.Contracts;
+using RS_EasyExceptionHandling7.Services.Comman;
 
-namespace RS_EasyExceptionHandling.Services.ErrorLog.Commands
+namespace RS_EasyExceptionHandling7.Services.ErrorLog.Commands
 {
     public interface IErrorLogCommandsService
     {

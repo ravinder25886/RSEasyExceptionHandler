@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RS_EasyExceptionHandling.Contracts;
-using RS_EasyExceptionHandling.Models;
-using RS_EasyExceptionHandling.Persistence;
-using RS_EasyExceptionHandling.Services.Comman;
-using RS_EasyExceptionHandling.Services.ErrorLog.Commands.UpdateCommand;
-using RS_EasyExceptionHandling.Services.Mail;
-using RS_EasyExceptionHandling.Services.Mail.SMTP;
+using RS_EasyExceptionHandling7.Contracts;
+using RS_EasyExceptionHandling7.Models;
+using RS_EasyExceptionHandling7.Persistence;
+using RS_EasyExceptionHandling7.Services.Comman;
+using RS_EasyExceptionHandling7.Services.ErrorLog.Commands.UpdateCommand;
+using RS_EasyExceptionHandling7.Services.Mail;
+using RS_EasyExceptionHandling7.Services.Mail.SMTP;
 
-namespace RS_EasyExceptionHandling.Services.ErrorLog.Commands
+namespace RS_EasyExceptionHandling7.Services.ErrorLog.Commands
 {
     public class ErrorLogCommandsService: IErrorLogCommandsService
     {
@@ -102,12 +102,13 @@ namespace RS_EasyExceptionHandling.Services.ErrorLog.Commands
                 return new Response<bool> { Succeeded = false, Message = ex.Message };
             }
         }
+
         public async Task<Response<bool>> DeleteBy_LessThanDateAsync(string date, CancellationToken cancellationToken)
         {
             try
             {
                 var entity = await _dbcontext.rSAppErrorLogs
-                .AsQueryable().Where(x => x.ErrorDate.Date <= Convert.ToDateTime(date).Date).ToListAsync();
+                .AsQueryable().Where(x=>x.ErrorDate.Date<=Convert.ToDateTime(date).Date).ToListAsync();
                 if (entity != null)
                 {
                     _dbcontext.rSAppErrorLogs.RemoveRange(entity);
@@ -122,6 +123,7 @@ namespace RS_EasyExceptionHandling.Services.ErrorLog.Commands
                 return new Response<bool> { Succeeded = false, Message = ex.Message };
             }
         }
+
         private async Task<RS_AppErrorLogs> CheckExistingLogDetail(string errorDetail)
         {
             try

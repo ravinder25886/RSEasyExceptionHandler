@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RS_EasyExceptionHandling", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{4E4B8478-681C-4BDF-897E-CD65C996BACF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RS_EasyExceptionHandling7", "RS_EasyExceptionHandling7\RS_EasyExceptionHandling7.csproj", "{3311A0E6-E557-4C3F-A034-E6D8506FE023}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTest7", "WebTest7\WebTest7.csproj", "{EC836F50-E61A-4AA2-8A6F-5C6FC17E69A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{4E4B8478-681C-4BDF-897E-CD65C996BACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E4B8478-681C-4BDF-897E-CD65C996BACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E4B8478-681C-4BDF-897E-CD65C996BACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3311A0E6-E557-4C3F-A034-E6D8506FE023}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3311A0E6-E557-4C3F-A034-E6D8506FE023}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3311A0E6-E557-4C3F-A034-E6D8506FE023}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3311A0E6-E557-4C3F-A034-E6D8506FE023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC836F50-E61A-4AA2-8A6F-5C6FC17E69A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC836F50-E61A-4AA2-8A6F-5C6FC17E69A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC836F50-E61A-4AA2-8A6F-5C6FC17E69A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC836F50-E61A-4AA2-8A6F-5C6FC17E69A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
